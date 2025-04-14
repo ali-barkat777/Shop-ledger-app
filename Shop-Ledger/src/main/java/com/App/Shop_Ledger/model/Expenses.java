@@ -14,14 +14,11 @@ import java.time.LocalDateTime;
 @ToString
 @Document(collection = "Expenses")
 public class Expenses {
-
-
     @Id
     private String id;
     private double amount;
     private String purchasedItem;
     private String description;
-
     @CreatedDate
     LocalDateTime createdDate;
 
@@ -29,9 +26,7 @@ public class Expenses {
         this.amount = amount;
         this.purchasedItem = purchasedItem;
         this.description = description;
-
     }
-
 }
 
 

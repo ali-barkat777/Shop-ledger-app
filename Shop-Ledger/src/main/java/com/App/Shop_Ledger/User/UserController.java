@@ -21,13 +21,9 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<Users> register(@RequestBody Users users) {
-//        if (userRepo.existsByUsernameAndRole(users.getUsername(), users.getRole())) {
-//            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-//        }
-//
-//        // Otherwise, proceed with registration.
-//        Users newUser = service.register(users);
-//        return ResponseEntity.ok(newUser);
+
+
+
         List<Users> users1 = userRepo.findByUsername(users.getUsername());
         if (users1 == null) {
             Users users2 = service.register(users);
